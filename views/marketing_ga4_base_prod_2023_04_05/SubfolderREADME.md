@@ -37,3 +37,28 @@ AS SELECT *
 FROM `google.com:superb-receiver-344820.marketing_ga4_base_prod.traffic_source` ;
 
 ```
+
+
+
+## Note
+The following commands were also run to remove the data from the table as we determine methods for bringing demo data into the environment:
+
+```
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.browser` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.browser_table` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.device_type` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.event` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.location` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.normalized_device_type` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.session` WHERE True;
+
+DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.traffic_source` WHERE True;
+
+```
