@@ -39,8 +39,7 @@ FROM `google.com:superb-receiver-344820.marketing_ga4_base_prod.traffic_source` 
 ```
 
 
-
-## Note
+# Update: 2022-04-12
 The following commands were also run to remove the data from the table as we determine methods for bringing demo data into the environment:
 
 ```
@@ -62,3 +61,15 @@ DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.session` WHERE Tru
 DELETE FROM `ryancustomerhosted.marketing_ga4_base_prod_views.traffic_source` WHERE True;
 
 ```
+
+
+# Update: 2022-04-19
+
+Added in the public GA4 Event Table -> view file: public_obf_event
+
+'''
+
+CREATE TABLE IF NOT EXISTS ryancustomerhosted.marketing_ga4_base_prod_views.public_obf_event AS
+SELECT *
+FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*` ;
+'''
