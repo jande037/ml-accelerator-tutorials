@@ -5,6 +5,7 @@ view: clustered_event_table {
   dimension: ga_session_id {
     type: string
     sql: ${TABLE}.ga_session_id ;;
+    primary_key: yes
   }
 
   dimension: ga_session_number {
@@ -40,5 +41,30 @@ view: clustered_event_table {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: sum_user_ltv_revenue {
+    type: sum
+    sql: ${user_ltv_revenue} ;;
+  }
+
+  measure: sum_total_item_quantity {
+    type: sum
+    sql: ${total_item_quantity} ;;
+  }
+
+  measure: sum_purchase_revenue_in_usd {
+    type: sum
+    sql: ${purchase_revenue_in_usd} ;;
+  }
+
+  measure: avg_percent_scrolled {
+    type: average
+    sql: ${percent_scrolled} ;;
+  }
+
+  measure: sum_ga_session_number {
+    type: sum
+    sql: ${ga_session_number} ;;
   }
 }
