@@ -1,5 +1,5 @@
 view: clustered_event_table {
-  sql_table_name: `ryancustomerhosted.marketing_ga4_base_prod_views.clustered_event_table`
+  sql_table_name: `lookerplus.the_look_perf_rrezvani.ga4_events_clustered`
     ;;
 
   dimension: ga_session_id {
