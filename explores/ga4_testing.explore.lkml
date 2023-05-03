@@ -2,6 +2,7 @@ include: "/views/marketing_ga4_demo_data/*.view.lkml"
 
 explore: ga4_event_clustered {
   group_label: "Demo Data"
+  # Note Type C: Referes to Type 'Clustered', i.e. the certain columns are clustered
   label: "Event Table: Type C"
   join: ga4_event_clustered__items {
     view_label: "Ga4 Event Clustered: Items"
