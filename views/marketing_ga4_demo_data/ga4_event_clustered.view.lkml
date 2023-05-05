@@ -199,8 +199,8 @@ view: ga4_event_clustered {
   }
 }
 
-
-# Refinements to add in measures
+# Refinement: Clustered Features
+###############################################################################################
 view: +ga4_event_clustered {
 
   measure: sum_user_ltv_revenue {
