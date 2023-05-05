@@ -199,6 +199,55 @@ view: ga4_event_clustered {
   }
 }
 
+
+# Refinements to add in measures
+view: +ga4_event_clustered {
+
+  measure: sum_user_ltv_revenue {
+    type: sum
+    sql: ${user_ltv_revenue} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+  measure: sum_ga_session_number {
+    type: sum
+    sql: ${ga_session_number} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+  measure: sum_percent_scrolled {
+    type: average
+    sql: ${percent_scrolled} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+  measure: sum_ecommerce__purchase_revenue_in_usd {
+    type: sum
+    sql: ${ecommerce__purchase_revenue_in_usd} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+  measure: sum_ecommerce__total_item_quantity {
+    type: sum
+    sql: ${ecommerce__total_item_quantity} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+  measure: sum_engagement_time_msec {
+    type: sum
+    sql: ${engagement_time_msec} ;;
+    description: "Clustered Feature"
+    group_label: "Type C"
+  }
+
+
+}
+
 view: ga4_event_clustered__items {
   drill_fields: [item_id]
 
